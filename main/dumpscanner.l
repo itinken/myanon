@@ -199,7 +199,7 @@ bool is_truncated() {
 <ST_VALUES>0x[0-9a-fA-F]+                   { return VALUE; }
 <ST_VALUES>_binary\ '(\\.|[^'\\])*'         { return VALUE; }
 <ST_VALUES>'(\\.|[^'\\])*'                  { return VALUE; }
-<ST_VALUES>[0-9\-\.e]+                      { return VALUE; }
+<ST_VALUES>-?[0-9][0-9\-\.e]*               { return VALUE; }
 <ST_VALUES>[ \n]                            { DUPOUT }
 <ST_VALUES>^(INSERT|REPLACE)\ INTO\ `[^`]+`(?:\ \([^\)]+\))? { DUPOUT
                                               if (is_anonymized()) {
