@@ -78,7 +78,7 @@ truncate                { return TRUNCATE; }
                           COPYSTR
                           return IDENTIFIER;
                         }
-[ \n]
+[ \t\n]
 #.*
 .                       {
                           config_error("Syntax error");
